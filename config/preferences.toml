@@ -1,0 +1,18 @@
+# this file keeps preferences not belonging to other areas of configuration
+[game]
+max_number_of_attendees_per_user = 5
+
+# logging level, possible value is one of the following:
+#    'CRITICAL': report only critical issues
+#    'FATAL': the same as CRITICAL
+#    'ERROR': report critical issues and errors
+#    'WARN': report also warnings
+#    'WARNING': the same as above
+#    'INFO': report also informational messages
+#    'DEBUG': finally, report all plus debug messages
+[logging]
+level = 'WARN'
+
+[language]
+#if not set, bot will talk privately with users using their local language set in Telegram, or with default chat language
+override_user_language = ""

@@ -1,0 +1,95 @@
+# this file keeps the questions newbie has to answer prior to be accepted to the games or to the chat
+
+# access levels by default. Hint: copy one name from the list and paste to the variable
+[access]
+# possible values
+options=["messages-read-only", "messages-read-write", "self-register"]
+# default access level for new chat members (arriving since the bot has been activated)
+guest="messages-read-only"
+# access level for registered members
+registered="self-register"
+# turn the flag below to force registration message to appear for all new members
+registration_mandatory="true"
+registration_window_minutes=30
+registration_missing_ban_hours=24
+
+[messages]
+value = "Entered value: %s"
+no_value = "No value is entered"
+enter_value_to_move_forward = "Enter a value to move forward"
+
+# menu entry point
+[start]
+caption="Register"
+message="To participate in this chat, you need to Register first, to confirm your agreement with the rules."
+buttons=["register","cancel"]
+
+# alternative menu entry point for registered users
+[start_registered]
+caption="Registration Info"
+message="Here you can see or update your registration info."
+buttons=["level","cancel"]
+
+# main menu steps
+[register]
+caption="Start Registration"
+message="This wizard will quickly ask you some basic questions about your skills."
+buttons=[["(forward) level"],["cancel"]]
+
+[level]
+caption="Step 1. Level"
+message="Evaluate your level of play. To have a understanding about the range, watch Ma Long on Youtube, or give a racket to your dog. Use the buttons below to answer."
+parameter="Level"
+values=["None", "Beginner", "Medium", "Advanced", "Master"]
+buttons=[["(forward) years (enable if value)"],["cancel"]]
+
+[years]
+caption="Step 2. Years"
+message="How many years have you been played in the table tennis? Use the buttons below to answer."
+parameter="Years of Experience"
+values=["0", "<1", "1-3", "3-5", ">5"]
+buttons=[["(forward) racket (enable if value)"],["(backward) level"],["cancel"]]
+
+[racket]
+caption="Step 3. Racket"
+message="Do you have your personal table tennis racket? Use the buttons below to answer."
+parameter="Own Racket"
+values=["Yes", "No", "Not sure"]
+buttons=[["(forward) wannaplay (enable if value)"],["(backward) years"],["cancel"]]
+
+[wannaplay]
+caption="Step 4. Trainins"
+message="Are you planning to go to the table tennis trainings with us? Use the buttons below to answer."
+parameter="Want to play"
+values=["Yes", "No", "Not sure"]
+buttons=[["(forward) confirm (enable if value)(hide if registered)"],["finish_registered (hide if not registered)"],["(backward) racket"],["cancel"]]
+
+[confirm]
+caption="Confirm"
+message="By clicking the Yes button below, I confirm that I am agree with the Rules of the Table Tennis club."
+values=["Yes"]
+buttons=[["finish if value"],["back","cancel"]]
+
+[finish]
+caption="Finish"
+message="Congratulations, now you can join our trainings!"
+#the only one allowed predefined command, to finish the registration and enable full access to the chat
+command="register"
+buttons=["exit"]
+
+[finish_registered]
+caption="Finish"
+message="You've seen or updated your personal information, thank you! See you on trainings!"
+buttons=["exit"]
+
+[cancel]
+caption="Cancel"
+action="exit"
+
+[exit]
+caption="Exit"
+action="exit"
+
+[back]
+caption="Back"
+action="back"

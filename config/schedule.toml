@@ -1,0 +1,99 @@
+# this file keeps the settings of the scheduled games
+#facility settings
+[facility]
+    [facility.main]
+    address="Rynek Glowny"
+    capacity=13
+    capacity_options=[8,11,13,15]
+
+    [facility.second]
+    address="Wawelska"
+    capacity=13
+    capacity_options=[8,11,13,15]
+
+#planning and human input
+[planning]
+#planning window, days, to validate human input
+planning_window_days = 15
+#max capacity possible, to validate human input
+max_capacity = 20
+#max duration possible, to validate human input
+max_duration = 120
+
+#schedule of the games
+[schedule]
+#standard duration
+#if not specified, every game will be supplied with its duration in minutes
+#if set, the duration will be mentioned for only games that have different duration, either scheduled or custom
+game_duration_minutes = 105
+#all weekly events
+games=["monday", "tuesday","friday","friday-2"]
+#exclusions of the schedule
+exclusion_days=["2023-12-05", "2023-12-31", "2024-01-01"]
+
+    #auto registration capability
+    [schedule.auto_registration]
+    games=["tuesday","friday"]
+    #e.g. 1 day ahead of the game date
+    registration_window_days_open="1"    
+    #e.g. at 18:00 (1 hour boundary)
+    registration_window_time_open="18:00"   
+
+#the next section contains the scheduled days, capacity and location details of the games
+[game]
+    [game.monday]
+    #day of week, 1 for Monday, 2 for Tuesday, etc.
+    day_of_week=1 
+    #start and end time   
+    start="19:15"  
+    end="21:00"
+    #maximum number of participants can be overriden, taken from facility by default if not specified
+    facility="main"
+    capacity=
+    #enable registration as a reserved player, to be added to the main list if anyone registered earlier cancels their participation
+    reserved_registration_enabled="true"
+
+    [game.monday-2]
+    #day of week, 1 for Monday, 2 for Tuesday, etc.
+    day_of_week=1 
+    #start and end time   
+    start="19:15"  
+    end="21:00"
+    #maximum number of participants can be overriden, taken from facility by default if not specified
+    facility="second"
+    capacity=
+    #enable registration as a reserved player, to be added to the main list if anyone registered earlier cancels their participation
+    reserved_registration_enabled="true"
+
+    [game.tuesday]
+    #day of week, 1 for Monday, 2 for Tuesday, etc.
+    day_of_week=2  
+    start="19:15"  
+    end="21:00"
+    #maximum number of participants can be overriden, taken from facility by default, or overriden as in this case
+    facility="main"
+    capacity=9
+    #enable registration as a reserved player, to be added to the main list if anyone registered earlier cancels their participation
+    reserved_registration_enabled="true"
+
+    [game.friday]
+    #day of week, 1 for Monday, 2 for Tuesday, etc.
+    day_of_week=5  
+    start="19:15"  
+    end="21:00"
+    #maximum number of participants can be overriden, taken from facility by default 
+    facility="main"
+    capacity=""
+    #enable registration as a reserved player, to be added to the main list if anyone registered earlier cancels their participation
+    reserved_registration_enabled="true"
+
+    [game.friday-2]
+    #day of week, 1 for Monday, 2 for Tuesday, etc.
+    day_of_week=5  
+    start="19:15"  
+    end="21:00"
+    #maximum number of participants can be overriden, taken from facility by default 
+    facility="second"
+    capacity="default"
+    #enable registration as a reserved player, to be added to the main list if anyone registered earlier cancels their participation
+    reserved_registration_enabled="true"

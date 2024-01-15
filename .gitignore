@@ -1,0 +1,6 @@
+bot.session
+admin.session
+data/chat.pickle
+data/competitions.pickle
+data/history.db
+data/schedule.pickle

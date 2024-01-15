@@ -1,0 +1,135 @@
+# this file contains non-translated messages used by the Bot, not defined in other configuration files
+
+[greetings]
+regular = "Hi from the bot:)"
+trusted = "Yes, Sir!"
+admin = "Straight to our admin business!"
+help = "Hi! I could not find a pinned message, please ask %s"
+bye = "See you soon!"
+newbie_line_1 = "%s, welcome in our community!"
+newbie_line_2 = "I have a few quick questions to you at the beginning, to prove you are a human and allow to write in this chat. To keep your privacy, please open a chat with me (%s), and type '/start'."
+newbie_line_3 = "Hurry up. You have only %s minutes! Othwerwise, you will have to wait for %s hours to join the chat again. Tick..tick..tick!..:)"
+newbie_line_3_alt = "Hurry up. You have only %s minutes to finish the registration and get all rights in this chat!. Tick..tick..tick!..:)"
+
+[chat]
+rules = "See Rules"
+exit = "Exit"
+back = "Back"
+apply = "Apply"
+
+[personal]
+view = "View your personal info"
+modify = "Modify"
+register = "Register"
+
+[game]
+join = "Join the Game"
+joined = "You've already joined the Game"
+leave = "Leave the Game"
+leave_confirm = "Confirm leave the Game"
+manage = "Manage"
+manage_open = "Manage Open Game"
+manage_scheduled = "Manage Scheduled Game"
+manage_custom = "Manage Nonscheduled Game"
+manage_cancelled = "Cancelled Game"
+manage_detailed = "Select existing scheduled game or create new one. Use the buttons below."
+view_players = "View Players"
+cancel = "Cancel the Game"
+delete_entry = "Delete the entry"
+cancel_confirm = "Confirm Cancel the Game"
+registration_open = "Open the Registration"
+registration_close = "Confirm and Close the Registration"
+notify_in_chat = "Notify in Chat"
+
+[schedule]
+select_open = "Open (%s)"
+select_scheduled = "Scheduled (%s)"
+select_confirmed = "Confirmed (%s)"
+select_cancelled = "Cancelled (%s)"
+select_custom_noncomplete = "Custom, Noncomplete (%s)"
+select_custom = "Add Custom Schedule"
+schedule = "Set the date/time"
+reschedule = "Change the date/time"
+cancel_confirm = "Please confirm cancel of the game scheduled on %s"
+cannot_open = "Cannot open registration, check if the date, the location and the max number of participants are set"
+
+[facility]
+update_number = "Update the Number of Players"
+update_address = "Update the Address"
+update_number_detailed = "Press the button with the updated max number of participants, or type it from the keyboard"
+number_changed = "<b>The maximum number of players</b> for the game scheduled on <b>%s</b> is changed to <b>%s</b>"
+update_address_detailed = "Select the new address from the options below"
+address_changed = "<b>The address </b> for the game scheduled on <b>%s</b> is changed to <b>%s</b>"
+update_datetime_detailed = "Type from the keyboard new date in 'day.month.year', start time in 'hour:minute', and duration in 'minutes'. Use the 'Apply' button then"
+datetime_changed = "<b>The date/time</b> for the game scheduled on <b>%s</b> is changed to <b>%s</b>"
+
+[announcement]
+registration_open_line_1 = "<b>Registration</b> for the game on <b>%s</b> is <b>OPEN</b>."
+registration_open_line_2 = "Maximum number of players is <b>%s</b>."
+registration_open_line_3 = "Use the poll, the bot (%s), or just write '+1','+2','+3' etc. in this chat to join!"
+registration_closed = "Game registration on <b>%s</b> is <b>closed</b>"
+game_cancelled_pm = "Dear %s, I regret to say, but the next game scheduled on %s is cancelled. See the common chat for details"
+game_cancelled_chat = "Dear friends, I regret to say, but the next game scheduled on %s is cancelled. I am really very sorry"
+participants_list_updated = "Participants list for game on %s is updated"
+participants_list_final = "The participants list for game on %s"
+
+[view]
+participants_list = "Participants list"
+summary = "Upcoming competitions list:"
+summary_competition = "<b>%s</b>, maximum number of players is %s, registered %s"
+summary_competition_participants_stress = "%s, <b>maximum number of players is %s</b>, registered %s"
+summary_competition_location_stress = "%s, maximum number of players is %s, registered %s, <b>location %s</b>"
+no_competition_open = "No competition is open"
+
+[admin]
+user_deregistered_in_the_day = "The user %s deregistered in the day of competition!"
+
+[poll]
+register_first_pm = "To play you need to register first, start the dialog with me"
+register_first_chat ="To play you need to register first, start the private dialog with me"
+
+    [poll.join]
+    question = "%s - do you go?"
+    option_1 = "Yes, I'm in!"
+    option_2 = "May be, not sure"
+    option_3 = "No"
+
+[join]
+no_open_games = "No games with registration open"
+register_first = "To join a game first you need to Register, to confirm your agreement with the rules."
+select = "Select the game to join"
+already_joined = "You have already registered for the play on %s as %s, all is OK"
+joined_cannot_extend = "You have already registered for the play on %s as %s, and there are no free places left"
+joined_updated = "You have already registered for the play on %s as %s, number of your participants (including you) is changed to %s"
+cannot_join_need_reduce = "No free places on %s for all your players (%s), you cannot be registered. Try decreasing the number of participants"
+joined = "You have registered on %s, congratulations!"
+joined_as_spare = "Registration on %s is full, you've added as a spare participant. If someone other cannot play, you'll be promoted and notified!"
+kicked_line_1 = "Sorry, but there is no place for you in the next game on %s"
+kicked_line_2 = "You've been put into the waiting queue, we'll notify you if something changes"
+deregister_confirm = "Please confirm de-registration from the game."
+deregister_confirm_paid = "Note: you will PAY for the missed game anyway, if you de-registered from it in the day of competition!"
+cannot_deregister = "You haven't registered for the play on %s, cannot deregister"
+deregistered ="You have deregistered on %s"
+deregistered_spare ="You have deregistered on %s from the spare players list"
+cannot_deregister_more = "You cannot deregister on %s more players that you have registered earlier"
+deregistered_updated = "The number of your guests on %s is decreased, remaining %s"
+promoted = "Hooray, you've been promoted to the main player list! Game date: %s"
+only_you = "only you"
+
+    [join.game_status]
+    open = "Registration on <b>%s</b> is <b>open</b>"
+    full = "Registration on <b>%s</b> is <b>finished</b>"
+    not_open = "Registration on %s is not open"
+    not_scheduled = "Not scheduled"
+
+[role]
+main = "main player"
+spare = "spare player"
+with_guests = "%s guest(s)"
+
+[report]
+title = "<b>%s</b>, registered: %s, maximum: %s, status: <b>%s</b>"
+active = "<b>Active</b> players: %s"
+queue = "<b>Waiting</b> queue: %s"
+empty = "No players registered"
+
